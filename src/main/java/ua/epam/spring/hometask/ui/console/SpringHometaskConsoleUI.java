@@ -5,6 +5,7 @@ import java.util.Collections;
 
 import org.springframework.context.ApplicationContext;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ua.epam.spring.hometask.domain.Auditorium;
 import ua.epam.spring.hometask.domain.Event;
 import ua.epam.spring.hometask.domain.EventRating;
@@ -35,7 +36,7 @@ public class SpringHometaskConsoleUI {
     }
 
     private void initContext() {
-        throw new IllegalStateException("Please, add Spring context initialization logic here");
+        context = new ClassPathXmlApplicationContext("spring.xml");
     }
 
     private void run() {

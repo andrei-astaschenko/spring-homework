@@ -1,0 +1,8 @@
+storage:
+  auditorium:
+    - name: "audit small"
+      numberOfSeats: 50
+    - name: "audit normal"
+      numberOfSeats: 80
+    - name: "audit big"
+      numberOfSeats: 100

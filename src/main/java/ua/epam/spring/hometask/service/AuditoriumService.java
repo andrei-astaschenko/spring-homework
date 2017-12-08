@@ -1,5 +1,6 @@
 package ua.epam.spring.hometask.service;
 
+import java.util.Collection;
 import java.util.Set;
 
 import javax.annotation.Nonnull;
@@ -17,7 +18,7 @@ public interface AuditoriumService {
      * 
      * @return set of all auditoriums
      */
-    public @Nonnull Set<Auditorium> getAll();
+    public @Nonnull Collection<Auditorium> getAll();
 
     /**
      * Finding auditorium by name

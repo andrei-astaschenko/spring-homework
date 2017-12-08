@@ -1,5 +1,6 @@
 package ua.epam.spring.hometask.ui.console.state;
 
+import java.util.Collection;
 import java.util.Set;
 
 import org.springframework.context.ApplicationContext;
@@ -54,7 +55,7 @@ public class AuditoriumManageState extends AbstractState {
     @Override
     protected void printDefaultInformation() {
         System.out.println("All auditoriums:");
-        Set<Auditorium> all = auditoriumService.getAll();
+        Collection<Auditorium> all = auditoriumService.getAll();
         all.forEach(a -> printAuditorium(a));
     }
 
