@@ -49,6 +49,7 @@ public class EventServiceImpl implements EventService {
     @Nullable
     @Override
     public Event getByName(@Nonnull String name) {
+        System.out.println(name);
         return eventStorage.stream().filter(event -> name.equals(event.getName())).findFirst().orElse(null);
     }
 

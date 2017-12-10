@@ -3,6 +3,7 @@ package ua.epam.spring.hometask.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
@@ -12,6 +13,7 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 @Configuration
 @ComponentScan("ua.epam.spring.hometask")
 @PropertySource("classpath:conf.properties")
+@EnableAspectJAutoProxy
 public class MainConfig {
 
     @Bean
