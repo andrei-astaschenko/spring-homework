@@ -1,3 +1,7 @@
+test:
+  event:
+    name: Hobbit
+
 storage:
   auditorium:
     - name: "audit small"

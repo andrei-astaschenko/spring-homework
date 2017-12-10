@@ -1,11 +1,8 @@
 package ua.epam.spring.hometask.ui.console;
 
-import java.time.LocalDateTime;
-import java.util.Collections;
-
 import org.springframework.context.ApplicationContext;
-
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import ua.epam.spring.hometask.config.MainConfig;
 import ua.epam.spring.hometask.domain.Auditorium;
 import ua.epam.spring.hometask.domain.Event;
 import ua.epam.spring.hometask.domain.EventRating;
@@ -16,6 +13,9 @@ import ua.epam.spring.hometask.service.BookingService;
 import ua.epam.spring.hometask.service.EventService;
 import ua.epam.spring.hometask.service.UserService;
 import ua.epam.spring.hometask.ui.console.state.MainState;
+
+import java.time.LocalDateTime;
+import java.util.Collections;
 
 /**
  * Simple console UI application for the hometask code. UI provides different
@@ -36,7 +36,8 @@ public class SpringHometaskConsoleUI {
     }
 
     private void initContext() {
-        context = new ClassPathXmlApplicationContext("spring.xml");
+        //context = new ClassPathXmlApplicationContext("spring.xml");
+        context = new AnnotationConfigApplicationContext(MainConfig.class);
     }
 
     private void run() {

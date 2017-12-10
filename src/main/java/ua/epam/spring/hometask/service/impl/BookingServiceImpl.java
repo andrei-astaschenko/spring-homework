@@ -1,5 +1,7 @@
 package ua.epam.spring.hometask.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ua.epam.spring.hometask.domain.Event;
 import ua.epam.spring.hometask.domain.Ticket;
 import ua.epam.spring.hometask.domain.User;
@@ -15,8 +17,10 @@ import java.util.Set;
 /**
  *
  */
+@Service
 public class BookingServiceImpl implements BookingService {
-    
+
+    @Autowired
     private DiscountService discountService;
 
     private Set<Ticket> bookedTickets = new HashSet<>();

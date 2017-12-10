@@ -1,5 +1,6 @@
 package ua.epam.spring.hometask.service.impl;
 
+import org.springframework.stereotype.Service;
 import ua.epam.spring.hometask.domain.Event;
 import ua.epam.spring.hometask.domain.User;
 import ua.epam.spring.hometask.service.DiscountService;
@@ -9,13 +10,12 @@ import javax.annotation.Nullable;
 import java.time.LocalDateTime;
 import java.time.chrono.ChronoLocalDate;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Map;
 
 /**
  *
  */
+@Service
 public class DiscountServiceImpl implements DiscountService {
 
     @Override

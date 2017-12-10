@@ -1,10 +1,12 @@
 package ua.epam.spring.hometask.service.impl;
 
+import org.springframework.stereotype.Service;
 import ua.epam.spring.hometask.domain.User;
 import ua.epam.spring.hometask.service.UserService;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import javax.annotation.PostConstruct;
 import java.time.LocalDate;
 import java.util.Collection;
 import java.util.HashSet;
@@ -14,10 +16,12 @@ import java.util.Set;
 /**
  *
  */
+@Service
 public class UserServiceImpl implements UserService {
 
     private Collection<User> userStorage;
 
+    @PostConstruct
     void initSpec() {
         System.out.println("********************** UserServiceImpl initialization **********************");
         Set<User> users = new HashSet();
